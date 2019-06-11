@@ -19,3 +19,6 @@
 [submodule "start/vim-easymotion"]
 	path = start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "start/vim-easy-align"]
+	path = start/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
