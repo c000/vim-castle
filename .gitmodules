@@ -16,3 +16,6 @@
 [submodule "start/neosnippet.vim"]
 	path = start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
+[submodule "start/vim-easymotion"]
+	path = start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
