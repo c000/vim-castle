@@ -13,3 +13,6 @@
 [submodule "start/asyncrun.vim"]
 	path = start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim
+[submodule "start/neosnippet.vim"]
+	path = start/neosnippet.vim
+	url = https://github.com/Shougo/neosnippet.vim.git
