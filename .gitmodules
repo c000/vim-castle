@@ -7,3 +7,6 @@
 [submodule "start/jellybeans.vim"]
 	path = start/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "start/vim-go"]
+	path = start/vim-go
+	url = https://github.com/fatih/vim-go.git
