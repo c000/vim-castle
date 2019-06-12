@@ -25,3 +25,6 @@
 [submodule "start/vim-quickhl"]
 	path = start/vim-quickhl
 	url = https://github.com/t9md/vim-quickhl.git
+[submodule "start/fzf.vim"]
+	path = start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
