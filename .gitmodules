@@ -22,3 +22,6 @@
 [submodule "start/vim-easy-align"]
 	path = start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "start/vim-quickhl"]
+	path = start/vim-quickhl
+	url = https://github.com/t9md/vim-quickhl.git
