@@ -31,3 +31,9 @@
 [submodule "start/gina.vim"]
 	path = start/gina.vim
 	url = https://github.com/lambdalisue/gina.vim.git
+[submodule "start/rapidfire.vim"]
+	path = start/rapidfire.vim
+	url = git@github.com:c000/rapidfire.vim
+[submodule "start/vim-dispatch"]
+	path = start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git

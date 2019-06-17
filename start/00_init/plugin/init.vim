@@ -14,6 +14,7 @@ set cursorline
 set ignorecase
 set smartcase
 set nowrap
+set diffopt=internal,filler,vertical,indent-heuristic,algorithm:histogram
 
 set termguicolors
 
@@ -97,6 +98,9 @@ augroup AsyncRunGo
   au BufRead *.go :nnoremap <f8> :<C-u>AsyncRun go test ./... -v
 augroup END
 
+" Dispatch
+let g:dispatch_no_maps = 1
+
 " Rust
 let g:rustfmt_autosave = 1
 
@@ -142,6 +146,7 @@ endfunction
 augroup coc-nvim
   autocmd!
   au FileType go call s:configure_coc()
+  au FileType cs call s:configure_coc()
 augroup END
 
 function! s:configure_coc() abort
@@ -156,13 +161,20 @@ nmap <Space>/ <Plug>(easymotion-sn)
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+" Gina
+let g:gina#command#blame#formatter#timestamp_months=0
+let g:gina#command#blame#formatter#timestamp_format1="%m-%dT%R"
+call gina#custom#command#alias('log', 'l')
+call gina#custom#command#alias('log', 'lstat')
+call gina#custom#command#alias('branch', 'b')
+call gina#custom#command#option('/\v^%(l|lstat)$', '--all')
+call gina#custom#command#option('/\v^%(l|lstat)$', '--graph')
+call gina#custom#command#option('lstat', '--stat', '200')
+call gina#custom#mapping#nmap(
+            \ '/\v%(blame|log|reflog)',
+            \ 'p',
+            \ ':<C-u>call gina#action#call(''preview'')<CR>',
+            \ {'noremap': 1, 'silent': 1}
+            \)
+
 colorscheme jellybeans
-
-hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionShade  Comment
-
-hi link EasyMotionTarget2First MatchParen
-hi link EasyMotionTarget2Second MatchParen
-
-hi link EasyMotionMoveHL Search
-hi link EasyMotionIncSearch Search
