@@ -37,3 +37,6 @@
 [submodule "start/vim-dispatch"]
 	path = start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "start/vim-gitgutter"]
+	path = start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
