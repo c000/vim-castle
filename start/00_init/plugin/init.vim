@@ -105,8 +105,11 @@ let g:dispatch_no_maps = 1
 let g:rustfmt_autosave = 1
 
 " Haskell
-if executable ('stylish-haskell')
-  au FileType haskell setlocal formatprg=stylish-haskell
+if executable ('hlint')
+  let g:ale_linters['haskell'] = ['hlint']
+endif
+if executable ('brittany')
+  let g:ale_fixers['haskell'] = ['brittany']
 endif
 
 " LSP
@@ -147,6 +150,7 @@ augroup coc-nvim
   autocmd!
   au FileType go call s:configure_coc()
   au FileType cs call s:configure_coc()
+  au FileType haskell call s:configure_coc()
 augroup END
 
 function! s:configure_coc() abort
