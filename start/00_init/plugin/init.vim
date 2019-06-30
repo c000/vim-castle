@@ -9,12 +9,18 @@ set number
 set scrolloff=8
 set virtualedit=all
 set foldmethod=syntax
-set inccommand=split
 set cursorline
 set ignorecase
 set smartcase
 set nowrap
-set diffopt=internal,filler,vertical,indent-heuristic,algorithm:histogram
+
+if has('nvim')
+  set diffopt=internal,filler,vertical,indent-heuristic,algorithm:histogram
+endif
+
+if exists('&inccommand')
+  set inccommand=split
+endif
 
 set termguicolors
 
