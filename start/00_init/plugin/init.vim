@@ -27,6 +27,9 @@ set termguicolors
 set undofile
 inoremap <C-O> <C-X><C-O>
 
+" Terminal
+command! -nargs=+ -complete=file T vsplit | terminal <args>
+
 " Ripgrep
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --sort-files
