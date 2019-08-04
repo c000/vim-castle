@@ -160,6 +160,8 @@ augroup coc-nvim
   au FileType go call s:configure_coc()
   au FileType cs call s:configure_coc()
   au FileType haskell call s:configure_coc()
+  au FileType python call s:configure_coc()
+  au FileType json call s:configure_coc()
 augroup END
 
 function! s:configure_coc() abort
