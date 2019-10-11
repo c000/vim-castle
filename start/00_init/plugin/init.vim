@@ -71,7 +71,13 @@ nmap <Space>s :<C-u>Lines<CR>
 nmap <Space>b :<C-u>Buffers<CR>
 nmap <Space>f :<C-u>History<CR>
 
-for d in split(glob(expand("~/.local/share/nvim/site/pack/*"), '\n'))
+if has('nvim')
+  let s:plugdirs = glob(expand("~/.local/share/nvim/site/pack/*"), '\n')
+else
+  let s:plugdirs = glob(expand("~/.vim/pack/*"), '\n')
+endif
+
+for d in split(s:plugdirs)
   for p in split(globpath(d, "start/*"), '\n')
     let s:docdir = p . "/doc"
     if isdirectory(s:docdir)
