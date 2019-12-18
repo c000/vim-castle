@@ -168,10 +168,12 @@ augroup coc-nvim
   au FileType haskell call s:configure_coc()
   au FileType python call s:configure_coc()
   au FileType json call s:configure_coc()
+  au FileType typescript call s:configure_coc()
 augroup END
 
 function! s:configure_coc() abort
   nmap <buffer> gd <Plug>(coc-definition)
+  nmap <buffer> gD <Plug>(coc-references)
   nnoremap <buffer> K :call CocAction('doHover')<CR>
   inoremap <buffer><expr> <c-o> coc#refresh()
 endfunction
