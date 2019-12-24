@@ -43,3 +43,6 @@
 [submodule "start/typescript-vim"]
 	path = start/typescript-vim
 	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "repos/ghcid"]
+	path = repos/ghcid
+	url = https://github.com/ndmitchell/ghcid
