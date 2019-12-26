@@ -43,3 +43,6 @@
 [submodule "repos/ghcid"]
 	path = repos/ghcid
 	url = https://github.com/ndmitchell/ghcid
+[submodule "start/vim-goimports"]
+	path = start/vim-goimports
+	url = https://github.com/mattn/vim-goimports
