@@ -1,9 +1,6 @@
 [submodule "start/coc.nvim"]
 	path = start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
-[submodule "start/ale"]
-	path = start/ale
-	url = https://github.com/w0rp/ale.git
 [submodule "start/jellybeans.vim"]
 	path = start/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
