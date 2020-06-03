@@ -43,3 +43,6 @@
 [submodule "start/vim-goimports"]
 	path = start/vim-goimports
 	url = https://github.com/mattn/vim-goimports
+[submodule "start/fern.vim"]
+	path = start/fern.vim
+	url = https://github.com/lambdalisue/fern.vim
