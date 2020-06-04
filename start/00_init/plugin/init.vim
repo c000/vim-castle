@@ -203,3 +203,42 @@ call gina#custom#mapping#nmap(
             \)
 
 colorscheme jellybeans
+
+" Fern
+" Disable netrw
+let g:loaded_netrw             = 1
+let g:loaded_netrwPlugin       = 1
+let g:loaded_netrwSettings     = 1
+let g:loaded_netrwFileHandlers = 1
+
+augroup my-fern-hijack
+  autocmd!
+  autocmd BufEnter * ++nested call s:hijack_directory()
+augroup END
+
+function! s:hijack_directory() abort
+  let path = expand('%:p')
+  if !isdirectory(path)
+    return
+  endif
+  bwipeout %
+  execute printf('Fern %s', fnameescape(path))
+endfunction
+
+command! Explore Fern %:p:h
+command! Vexplore Fern -opener=vs %:p:h
+command! Sexplore Fern -opener=sp %:p:h
+
+" Rapidfire
+nmap <F1> :<C-u>Rapidfire F1<CR>
+nmap <F2> :<C-u>Rapidfire F2<CR>
+nmap <F3> :<C-u>Rapidfire F3<CR>
+nmap <F4> :<C-u>Rapidfire F4<CR>
+nmap <F5> :<C-u>Rapidfire F5<CR>
+nmap <F6> :<C-u>Rapidfire F6<CR>
+nmap <F7> :<C-u>Rapidfire F7<CR>
+nmap <F8> :<C-u>Rapidfire F8<CR>
+nmap <F9> :<C-u>Rapidfire F9<CR>
+nmap <F10> :<C-u>Rapidfire F10<CR>
+nmap <F11> :<C-u>Rapidfire F11<CR>
+nmap <F12> :<C-u>Rapidfire F12<CR>
