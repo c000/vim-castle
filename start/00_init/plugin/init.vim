@@ -225,12 +225,12 @@ function! s:hijack_directory() abort
   execute printf('Fern %s', fnameescape(path))
 endfunction
 
-command! Explore Fern %:p:h
-command! Vexplore Fern -opener=vs %:p:h
-command! Sexplore Fern -opener=sp %:p:h
+command! Explore Fern %:p:h -reveal=%
+command! Vexplore Fern -opener=vs %:p:h -reveal=%
+command! Sexplore Fern -opener=sp %:p:h -reveal=%
+nnoremap <F1> :<C-u>Fern -drawer -keep -toggle .<CR>
 
 " Rapidfire
-nnoremap <F1> :<C-u>Rapidfire F1<CR>
 nnoremap <F2> :<C-u>Rapidfire F2<CR>
 nnoremap <F3> :<C-u>Rapidfire F3<CR>
 nnoremap <F4> :<C-u>Rapidfire F4<CR>
@@ -242,6 +242,4 @@ nnoremap <F9> :<C-u>Rapidfire F9<CR>
 nnoremap <F10> :<C-u>Rapidfire F10<CR>
 nnoremap <F11> :<C-u>Rapidfire F11<CR>
 nnoremap <F12> :<C-u>Rapidfire F12<CR>
-let g:rapidfire#commands = {
-            \ 'F1': 'Fern -drawer -keep -toggle .',
-            \ }
+let g:rapidfire#persistent_filename = '~/.cache/rapidfire/commands.json'
