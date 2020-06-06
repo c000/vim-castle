@@ -230,15 +230,18 @@ command! Vexplore Fern -opener=vs %:p:h
 command! Sexplore Fern -opener=sp %:p:h
 
 " Rapidfire
-nmap <F1> :<C-u>Rapidfire F1<CR>
-nmap <F2> :<C-u>Rapidfire F2<CR>
-nmap <F3> :<C-u>Rapidfire F3<CR>
-nmap <F4> :<C-u>Rapidfire F4<CR>
-nmap <F5> :<C-u>Rapidfire F5<CR>
-nmap <F6> :<C-u>Rapidfire F6<CR>
-nmap <F7> :<C-u>Rapidfire F7<CR>
-nmap <F8> :<C-u>Rapidfire F8<CR>
-nmap <F9> :<C-u>Rapidfire F9<CR>
-nmap <F10> :<C-u>Rapidfire F10<CR>
-nmap <F11> :<C-u>Rapidfire F11<CR>
-nmap <F12> :<C-u>Rapidfire F12<CR>
+nnoremap <F1> :<C-u>Rapidfire F1<CR>
+nnoremap <F2> :<C-u>Rapidfire F2<CR>
+nnoremap <F3> :<C-u>Rapidfire F3<CR>
+nnoremap <F4> :<C-u>Rapidfire F4<CR>
+nnoremap <F5> :<C-u>Rapidfire F5<CR>
+nnoremap <F6> :<C-u>Rapidfire F6<CR>
+nnoremap <F7> :<C-u>Rapidfire F7<CR>
+nnoremap <F8> :<C-u>Rapidfire F8<CR>
+nnoremap <F9> :<C-u>Rapidfire F9<CR>
+nnoremap <F10> :<C-u>Rapidfire F10<CR>
+nnoremap <F11> :<C-u>Rapidfire F11<CR>
+nnoremap <F12> :<C-u>Rapidfire F12<CR>
+let g:rapidfire#commands = {
+            \ 'F1': 'Fern -drawer -keep -toggle .',
+            \ }
