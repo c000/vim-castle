@@ -3,8 +3,8 @@ set encoding=utf-8
 set list
 set listchars=eol:⏎,tab:>-
 set et
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 set number
 set scrolloff=8
 set virtualedit=all
