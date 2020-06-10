@@ -1,0 +1,37 @@
+{
+  "suggest.autoTrigger": "always",
+  "coc.preferences.previewAutoClose": false,
+  "coc.preferences.hoverTarget": "preview",
+
+  "python.linting.enabled": false,
+  "python.jediEnabled": false,
+
+  "coc.preferences.formatOnSaveFiletypes": ["haskell"],
+
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".git/"],
+      "filetypes": ["go"]
+    },
+    "csharp": {
+      "command": "/tmp/omnisharp/run",
+      "args": ["-lsp"],
+      "rootPatterns": [".git/"],
+      "filetypes": ["cs"]
+    },
+    "haskell": {
+      "command": "hie-wrapper",
+      "rootPatterns": [".stack.yaml", "package.yaml"],
+      "filetypes": ["haskell"],
+      "initializationOptions": {},
+      "settings": {
+        "languageServerHaskel": {
+          "hlintOn": false,
+          "maxNumberOfProblems": 10,
+          "completionSnippetsOn": true
+        }
+      }
+    }
+  }
+}
