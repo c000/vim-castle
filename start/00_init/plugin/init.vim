@@ -242,4 +242,8 @@ nnoremap <F9> :<C-u>Rapidfire F9<CR>
 nnoremap <F10> :<C-u>Rapidfire F10<CR>
 nnoremap <F11> :<C-u>Rapidfire F11<CR>
 nnoremap <F12> :<C-u>Rapidfire F12<CR>
+nnoremap <Up> :<C-u>Rapidfire Up<CR>
+nnoremap <Down> :<C-u>Rapidfire Down<CR>
+nnoremap <Right> :<C-u>Rapidfire Right<CR>
+nnoremap <Left> :<C-u>Rapidfire Left<CR>
 let g:rapidfire#persistent_filename = '~/.cache/rapidfire/commands.json'
