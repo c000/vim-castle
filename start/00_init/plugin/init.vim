@@ -228,7 +228,7 @@ endfunction
 command! Explore Fern %:p:h -reveal=%
 command! Vexplore Fern -opener=vs %:p:h -reveal=%
 command! Sexplore Fern -opener=sp %:p:h -reveal=%
-nnoremap <F1> :<C-u>Fern -drawer -keep -toggle .<CR>
+nnoremap <F1> :<C-u>Fern -drawer -keep -toggle -reveal=% .<CR>
 
 " Rapidfire
 nnoremap <F2> :<C-u>Rapidfire F2<CR>
