@@ -62,6 +62,9 @@ endif
 " TypeScript
 let g:ale_fixers['typescript'] = ['eslint', 'prettier']
 
+" Markdown
+let g:markdown_folding = 1
+
 nmap <Space>: <Plug>(quickhl-manual-this-whole-word)
 
 " FZF
