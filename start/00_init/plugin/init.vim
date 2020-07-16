@@ -182,7 +182,7 @@ function! s:configure_coc() abort
 endfunction
 
 " easymotion
-nmap <Space>/ <Plug>(easymotion-sn)
+nmap <Space>j <Plug>(easymotion-sn)
 " easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
