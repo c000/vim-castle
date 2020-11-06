@@ -130,39 +130,6 @@ if executable ('brittany')
   let g:ale_fixers['haskell'] = ['brittany']
 endif
 
-" LSP
-augroup my-lsp
-  autocmd! *
-  if executable('rls')
-    au User lsp_setup call lsp#register_server({
-          \
-          \ 'name': 'rls',
-          \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-          \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'Cargo.toml'))},
-          \ 'whitelist': ['rust'],
-          \ })
-    au FileType rust setlocal omnifunc=lsp#complete
-    au FileType rust call s:configure_lsp()
-  endif
-
-  if executable('typescript-language-server')
-    au User lsp_setup call lsp#register_server({
-          \ 'name': 'typescript-language-server',
-          \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-          \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-          \ 'whitelist': ['typescript'],
-          \ })
-    au FileType typescript setlocal omnifunc=lsp#complete
-    au FileType typescript call s:configure_lsp()
-  endif
-augroup END
-
-function! s:configure_lsp() abort
-  nnoremap <buffer> gd :<C-u>LspDefinition<CR>
-  nnoremap <buffer> gD :<C-u>LspReferences<CR>
-  nnoremap <buffer> K :<C-u>LspHover<CR>
-endfunction
-
 " coc.nvim
 augroup coc-nvim
   autocmd!
