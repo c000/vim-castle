@@ -139,6 +139,7 @@ augroup coc-nvim
   au FileType python call s:configure_coc()
   au FileType json call s:configure_coc()
   au FileType typescript call s:configure_coc()
+  au FileType rust call s:configure_coc()
 augroup END
 
 function! s:configure_coc() abort

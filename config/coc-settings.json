@@ -6,7 +6,7 @@
   "python.linting.enabled": false,
   "python.jediEnabled": false,
 
-  "coc.preferences.formatOnSaveFiletypes": ["haskell"],
+  "coc.preferences.formatOnSaveFiletypes": ["haskell", "rust"],
 
   "languageserver": {
     "golang": {
