@@ -28,7 +28,7 @@ set undofile
 inoremap <C-O> <C-X><C-O>
 
 " Terminal
-command! -nargs=+ -complete=file T vsplit | terminal <args>
+command! -nargs=+ -complete=file T call myutils#splitterm(<f-args>)
 
 " Ripgrep
 if executable('rg')
@@ -69,6 +69,7 @@ nmap <Space>: <Plug>(quickhl-manual-this-whole-word)
 
 " FZF
 let $FZF_DEFAULT_OPTS = $FZF_DEFAULT_OPTS . " --no-sort"
+let g:fzf_layout = {'down':'40%'}
 nmap <expr> <Space>r ':<C-u>Rg ' . expand('<cword>')
 nmap <Space>s :<C-u>Lines<CR>
 nmap <Space>b :<C-u>Buffers<CR>
