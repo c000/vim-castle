@@ -32,7 +32,7 @@ command! -nargs=+ -complete=file T call myutils#splitterm(<f-args>)
 
 " Ripgrep
 if executable('rg')
-  set grepprg=rg\ --vimgrep\ --sort-files
+  set grepprg=rg\ --vimgrep\ --sort\ path
   set grepformat=%f:%l:%c:%m
 endif
 
