@@ -1,6 +1,5 @@
 function! myutils#splitterm(...) abort
   let s:wnr = bufwinnr('term://')
-  echo s:wnr
   if s:wnr == -1
     vnew
   else
@@ -8,5 +7,6 @@ function! myutils#splitterm(...) abort
     enew
   end
   call termopen(a:000)
+  setlocal nobuflisted
   wincmd p
 endfunction
