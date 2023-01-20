@@ -6,6 +6,10 @@
   "python.linting.enabled": false,
   "python.jediEnabled": false,
 
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+
   "coc.preferences.formatOnSaveFiletypes": ["haskell", "rust"],
 
   "languageserver": {
@@ -25,6 +29,11 @@
       "args": ["--lsp"],
       "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
       "filetypes": ["haskell", "lhaskell"]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"]
     }
   }
 }
