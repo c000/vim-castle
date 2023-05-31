@@ -154,8 +154,8 @@ endfunction
 " easymotion
 nmap <Space>j <Plug>(easymotion-sn)
 " easy-align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(LiveEasyAlign)
+nmap ga <Plug>(LiveEasyAlign)
 
 " Gina
 let g:gina#command#blame#formatter#timestamp_months=0
