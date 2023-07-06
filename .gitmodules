@@ -46,6 +46,7 @@
 [submodule "start/fern.vim"]
 	path = start/fern.vim
 	url = https://github.com/lambdalisue/fern.vim
+	branch = main
 [submodule "start/denops.vim"]
 	path = start/denops.vim
 	url = https://github.com/vim-denops/denops.vim
