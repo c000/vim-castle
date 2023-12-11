@@ -53,3 +53,6 @@
 [submodule "start/gin.vim"]
 	path = start/gin.vim
 	url = https://github.com/lambdalisue/gin.vim
+[submodule "start/nvim-treesitter"]
+	path = start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter

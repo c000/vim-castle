@@ -31,6 +31,16 @@ inoremap <C-O> <C-X><C-O>
 " Terminal
 command! -nargs=+ -complete=file T call myutils#splitterm(<f-args>)
 
+" Treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {"go", "haskell", "lua", "vim"},
+  highlight = {
+    enable = true
+  }
+}
+EOF
+
 " Ripgrep
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --sort\ path
