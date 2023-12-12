@@ -8,7 +8,6 @@ set sw=2
 set number
 set scrolloff=8
 set virtualedit=all
-set foldmethod=syntax
 set cursorline
 set ignorecase
 set smartcase
@@ -40,6 +39,8 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 EOF
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 
 " Ripgrep
 if executable('rg')
