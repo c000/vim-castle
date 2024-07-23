@@ -33,7 +33,7 @@ command! -nargs=+ -complete=file T call myutils#splitterm(<f-args>)
 " Treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"go", "haskell", "lua", "vim"},
+  ensure_installed = {"go", "haskell", "json", "lua", "vim"},
   highlight = {
     enable = true
   }
