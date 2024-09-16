@@ -144,6 +144,8 @@ if executable ('brittany')
 endif
 
 " coc.nvim
+let g:coc_global_extensions = ['coc-rust-analyzer']
+
 augroup coc-nvim
   autocmd!
   au FileType go call s:configure_coc()
