@@ -10,6 +10,11 @@
   "deno.lint": true,
   "deno.unstable": true,
 
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+
+  "svelte.enable-ts-plugin": true,
+
   "coc.preferences.formatOnSaveFiletypes": ["haskell", "rust"],
 
   "languageserver": {
