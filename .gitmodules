@@ -62,3 +62,6 @@
 	path = start/copilot.vim
 	url = https://github.com/github/copilot.vim.git
 	branch = release
+[submodule "start/fzf"]
+	path = start/fzf
+	url = https://github.com/junegunn/fzf
