@@ -65,3 +65,6 @@
 [submodule "start/fzf"]
 	path = start/fzf
 	url = https://github.com/junegunn/fzf
+[submodule "start/transparent.nvim"]
+	path = start/transparent.nvim
+	url = https://github.com/tribela/transparent.nvim
