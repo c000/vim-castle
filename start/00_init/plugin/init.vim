@@ -185,6 +185,7 @@ let g:gina#command#blame#formatter#timestamp_format1="%m-%dT%R"
 call gina#custom#command#alias('log', 'l')
 call gina#custom#command#alias('log', 'lstat')
 call gina#custom#command#alias('branch', 'b')
+call gina#custom#command#option('diff', '--no-ext-diff')
 call gina#custom#command#option('/\v^%(l|lstat)$', '--tags')
 call gina#custom#command#option('/\v^%(l|lstat)$', '--branches')
 call gina#custom#command#option('/\v^%(l|lstat)$', '--remotes')
