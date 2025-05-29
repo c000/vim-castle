@@ -177,6 +177,7 @@ endfunction
 lua <<EOF
   require('mini.ai').setup({})
   require('mini.align').setup({})
+  require('mini.bracketed').setup({})
   require('mini.comment').setup({})
   require('mini.cursorword').setup({})
   require('mini.diff').setup({})
