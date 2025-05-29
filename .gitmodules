@@ -4,18 +4,9 @@
 [submodule "start/jellybeans.vim"]
 	path = start/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
-[submodule "start/asyncrun.vim"]
-	path = start/asyncrun.vim
-	url = https://github.com/skywind3000/asyncrun.vim
 [submodule "start/neosnippet.vim"]
 	path = start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
-[submodule "start/vim-easymotion"]
-	path = start/vim-easymotion
-	url = https://github.com/easymotion/vim-easymotion.git
-[submodule "start/vim-easy-align"]
-	path = start/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align.git
 [submodule "start/vim-quickhl"]
 	path = start/vim-quickhl
 	url = https://github.com/t9md/vim-quickhl.git
@@ -31,9 +22,6 @@
 [submodule "start/vim-dispatch"]
 	path = start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
-[submodule "start/vim-gitgutter"]
-	path = start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "start/typescript-vim"]
 	path = start/typescript-vim
 	url = git@github.com:leafgarland/typescript-vim.git
