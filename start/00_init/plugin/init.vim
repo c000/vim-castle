@@ -145,7 +145,11 @@ if executable ('brittany')
 endif
 
 " coc.nvim
-let g:coc_global_extensions = ['coc-rust-analyzer']
+let g:coc_global_extensions = [
+      \ 'coc-deno',
+      \ 'coc-rust-analyzer',
+      \ 'coc-tsserver',
+      \]
 
 augroup coc-nvim
   autocmd!
