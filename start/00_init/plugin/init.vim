@@ -164,9 +164,13 @@ augroup END
 
 function! s:configure_coc() abort
   nmap <buffer> gd <Plug>(coc-definition)
+  nmap <buffer> gi <Plug>(coc-implementation)
   nmap <buffer> gD <Plug>(coc-references)
+  nmap <buffer> qf <Plug>(coc-fix-current)
+  nmap <buffer> <C-k> <Plug>(coc-codeaction)
+  vmap <buffer> <C-k> <Plug>(coc-codeaction-selected)
   nnoremap <buffer> K :call CocAction('doHover')<CR>
-  inoremap <buffer><expr> <c-o> coc#refresh()
+  inoremap <expr> <C-o> coc#refresh()
 endfunction
 
 " easymotion
