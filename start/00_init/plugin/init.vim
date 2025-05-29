@@ -173,6 +173,18 @@ function! s:configure_coc() abort
   inoremap <expr> <C-o> coc#refresh()
 endfunction
 
+" mini.nvim
+lua <<EOF
+  require('mini.ai').setup({})
+  require('mini.align').setup({})
+  require('mini.comment').setup({})
+  require('mini.cursorword').setup({})
+  require('mini.diff').setup({})
+  require('mini.indentscope').setup({})
+  require('mini.jump2d').setup({})
+  require('mini.surround').setup({})
+EOF
+
 " easymotion
 nmap <Space>j <Plug>(easymotion-sn)
 " easy-align

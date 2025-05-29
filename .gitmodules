@@ -56,3 +56,7 @@
 [submodule "start/transparent.nvim"]
 	path = start/transparent.nvim
 	url = https://github.com/tribela/transparent.nvim
+[submodule "start/mini.nvim"]
+	path = start/mini.nvim
+	url = https://github.com/echasnovski/mini.nvim.git
+	branch = main
