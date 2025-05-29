@@ -29,6 +29,7 @@ inoremap <C-O> <C-X><C-O>
 
 " Terminal
 command! -nargs=+ -complete=file T call myutils#splitterm(<f-args>)
+tnoremap <Esc><Esc> <C-\><C-n>
 
 " Treesitter
 lua <<EOF
