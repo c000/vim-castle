@@ -206,6 +206,15 @@ command! Vexplore Fern -opener=vs %:p:h -reveal=%
 command! Sexplore Fern -opener=sp %:p:h -reveal=%
 nnoremap <F1> :<C-u>Fern -drawer -keep -toggle -reveal=% .<CR>
 
+function! s:init_fern() abort
+  nnoremap <buffer> t <Plug>(fern-action-terminal)
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+
 " Rapidfire
 nnoremap <F2> :<C-u>Rapidfire F2<CR>
 nnoremap <F3> :<C-u>Rapidfire F3<CR>
