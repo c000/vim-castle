@@ -34,14 +34,14 @@ tnoremap <Esc><Esc> <C-\><C-n>
 " Treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"go", "haskell", "json", "lua", "vim"},
+  ensure_installed = {"go", "haskell", "json", "lua", "vim", "rust"},
   highlight = {
     enable = true
   }
 }
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 EOF
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
 
 " Ripgrep
 if executable('rg')
