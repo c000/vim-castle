@@ -182,6 +182,7 @@ lua <<EOF
   require('mini.diff').setup({})
   require('mini.indentscope').setup({})
   require('mini.jump2d').setup({})
+  require('mini.operators').setup({})
   require('mini.surround').setup({})
 EOF
 
