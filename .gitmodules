@@ -60,3 +60,7 @@
 	path = start/mini.nvim
 	url = https://github.com/echasnovski/mini.nvim.git
 	branch = main
+[submodule "start/nvim-aibo"]
+	path = start/nvim-aibo
+	url = https://github.com/lambdalisue/nvim-aibo
+	branch = main
