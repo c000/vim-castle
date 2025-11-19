@@ -12,7 +12,7 @@ set cursorline
 set ignorecase
 set smartcase
 set nowrap
-set ambiwidth=double
+set ambiwidth=single
 
 if has('nvim')
   set diffopt=internal,filler,vertical,indent-heuristic,algorithm:histogram
