@@ -186,16 +186,11 @@ lua <<EOF
   require('mini.cursorword').setup({})
   require('mini.diff').setup({})
   require('mini.indentscope').setup({})
-  require('mini.jump2d').setup({})
+  local jump2d = require('mini.jump2d')
+  jump2d.setup(jump2d.builtin_opts.word_start)
   require('mini.operators').setup({})
   require('mini.surround').setup({})
 EOF
-
-" easymotion
-nmap <Space>j <Plug>(easymotion-sn)
-" easy-align
-xmap ga <Plug>(LiveEasyAlign)
-nmap ga <Plug>(LiveEasyAlign)
 
 " Gina
 let g:gina#command#blame#formatter#timestamp_months=0
