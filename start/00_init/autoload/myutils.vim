@@ -6,7 +6,7 @@ function! myutils#splitterm(...) abort
     execute s:wnr . 'wincmd w'
     enew
   end
-  call termopen(a:000)
+  call jobstart(a:0 ? a:000 : [&shell], {'term': v:true})
   setlocal nobuflisted
   wincmd p
 endfunction
