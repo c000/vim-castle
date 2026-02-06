@@ -29,13 +29,16 @@ inoremap <C-O> <C-X><C-O>
 
 " Terminal
 command! -nargs=* -complete=file T call myutils#splitterm(<f-args>)
-tnoremap <Esc><Esc> <C-\><C-n>
 autocmd TermOpen * setlocal buflisted
+tmap <silent> <C-w> <C-\><C-n><C-w>
+tnoremap <silent> <Esc> <C-\><C-n>
+tnoremap <silent> <C-c> <Esc>
+tnoremap <silent> <C-g><C-c> <C-c>
 
 " Treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"go", "haskell", "json", "lua", "vim", "rust"},
+  ensure_installed = {"go", "haskell", "json", "lua", "vim", "rust", "perl"},
   highlight = {
     enable = true
   }
