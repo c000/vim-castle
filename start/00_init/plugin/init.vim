@@ -31,9 +31,7 @@ inoremap <C-O> <C-X><C-O>
 command! -nargs=* -complete=file T call myutils#splitterm(<f-args>)
 autocmd TermOpen * setlocal buflisted
 tmap <silent> <C-w> <C-\><C-n><C-w>
-tnoremap <silent> <Esc> <C-\><C-n>
-tnoremap <silent> <C-c> <Esc>
-tnoremap <silent> <C-g><C-c> <C-c>
+tnoremap <silent> <C-g><C-w> <C-w>
 
 " Treesitter
 lua <<EOF
